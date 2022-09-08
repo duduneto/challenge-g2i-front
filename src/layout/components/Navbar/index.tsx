@@ -1,9 +1,17 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Title } from './styles';
 
-const Navbar: React.FC = () => {
-  return <Container/>;
+type Props = {
+  title?: string;
+}
+
+const Navbar: React.FC<Props> = ({ title }) => {
+  return (
+    <Container>
+      <Title>{title}</Title>
+    </Container>
+  );
 }
 
 export default Navbar;
