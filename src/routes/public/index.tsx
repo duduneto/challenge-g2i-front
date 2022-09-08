@@ -5,9 +5,7 @@ import { Home } from '../../screens';
 const PublicRoutes: React.FC = () => {
   return (
     <Routes>
-      <Route path="/">
-        <Home />
-      </Route>
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
