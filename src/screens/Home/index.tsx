@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Text } from '../../components';
+import { Button, Card, Text } from '../../components';
 import { useContents } from '../../hooks';
 import { useGlobalDispatch } from '../../hooks/useDispatch';
 import { useAppSelector } from '../../hooks/useSelector';
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           </ContentBox>
         </GreetingsContainer>
         <CTAContainer>
-          <h1>BEGIN</h1>
+          <Button>BEGIN</Button>
         </CTAContainer>
       </ContentContainer>
     </Container>

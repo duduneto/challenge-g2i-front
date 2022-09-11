@@ -38,4 +38,5 @@ export const CTAContainer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	padding: 2rem 1rem;
 `;
