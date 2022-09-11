@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navbar } from '../components';
+import MainNavbar from './MainNavbar';
 
-import { Container } from './styles';
+import { Container, ContentContainer } from './styles';
 
 type Props = {
   children: React.ReactNode;
@@ -10,8 +10,10 @@ type Props = {
 const Main: React.FC<Props> = (props) => {
   return (
     <Container>
-      <Navbar title='Welcome to the Trivia Challenge!' />
-      {props.children}
+      <MainNavbar />
+      <ContentContainer>
+        {props.children}
+      </ContentContainer>
     </Container>
   );
 }

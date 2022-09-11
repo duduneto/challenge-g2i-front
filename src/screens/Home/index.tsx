@@ -1,7 +1,15 @@
 import React from 'react';
+import { Card, Text } from '../../components';
 import { useContents } from '../../hooks';
 import { useGlobalDispatch } from '../../hooks/useDispatch';
 import { useAppSelector } from '../../hooks/useSelector';
+import { 
+  Container,
+  ContentBox,
+  ContentContainer,
+  GreetingsContainer,
+  CTAContainer,
+ } from './styles';
 
 const Home: React.FC = () => {
   const contents = useContents();
@@ -9,17 +17,33 @@ const Home: React.FC = () => {
   const home = useAppSelector(state => state.global.home);
   // const [value, setValue] = React.useState(false);
   const pressStart = () => {
-    setState({home: new Date().getTime()})
+    setState({ home: new Date().getTime() })
     // setValue(state => !state);
   };
 
+  React.useEffect(() => {
+    setState({ navbar: { title: 'Welcome to the Trivia Challenge!' } })
+  }, [])
+
   return (
-    <>
-      <h1>Parent</h1>
-      <h2>{home}</h2>
-      <h1>{contents.content.welcome}</h1>
-      <button onClick={pressStart}>Start</button>
-    </>
+    <Container>
+      <ContentContainer>
+        <GreetingsContainer>
+          <ContentBox>
+            <Text 
+            content='You will be presented with 10 True or False questions.'
+            size='md-lg'
+            />
+          </ContentBox>
+          <ContentBox>
+            <Text content='Can you score 100%?' />
+          </ContentBox>
+        </GreetingsContainer>
+        <CTAContainer>
+          <h1>BEGIN</h1>
+        </CTAContainer>
+      </ContentContainer>
+    </Container>
   );
 }
 

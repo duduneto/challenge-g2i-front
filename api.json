@@ -1,0 +1,105 @@
+{
+	"response_code": 0,
+	"results": [
+		{
+			"category": "General Knowledge",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "&quot;Number 16 Bus Shelter&quot; was a child&#039;s name that was approved by the New Zealand government.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		},
+		{
+			"category": "History",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "The fourth funnel of the RMS Titanic was fake designed to make the ship look more powerful and symmetrical.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		},
+		{
+			"category": "Entertainment: Video Games",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "TF2: Sentry rocket damage falloff is calculated based on the distance between the sentry and the enemy, not the engineer and the enemy",
+			"correct_answer": "False",
+			"incorrect_answers": [
+				"True"
+			]
+		},
+		{
+			"category": "General Knowledge",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "In Scandinavian languages, the letter &Aring; means river.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		},
+		{
+			"category": "Entertainment: Books",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "Harry Potter was born on July 31st, 1980.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		},
+		{
+			"category": "Celebrities",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "Lady Gaga&#039;s real name is Stefani Joanne Angelina Germanotta.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		},
+		{
+			"category": "Science & Nature",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "The value of one Calorie is different than the value of one calorie.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		},
+		{
+			"category": "Entertainment: Music",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "Pete Townshend&#039;s solo album, &quot;White City: A Novel&quot;, is set in the metropolitan area of Chicago.",
+			"correct_answer": "False",
+			"incorrect_answers": [
+				"True"
+			]
+		},
+		{
+			"category": "Entertainment: Video Games",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "In &quot;Minecraft&quot;, gold tools are faster than diamond tools.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		},
+		{
+			"category": "Art",
+			"type": "boolean",
+			"difficulty": "hard",
+			"question": "The Statue of Liberty&#039;s official name is &ldquo;Liberty Enlightening the World&rdquo;.",
+			"correct_answer": "True",
+			"incorrect_answers": [
+				"False"
+			]
+		}
+	]
+}

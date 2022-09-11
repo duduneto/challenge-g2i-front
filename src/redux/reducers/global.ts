@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
 
 interface IIndexable {
-    [key: string]: string;
+    [key: string]: any;
 }
 
 type IInitialState = IIndexable & {
