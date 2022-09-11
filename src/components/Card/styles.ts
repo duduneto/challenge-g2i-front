@@ -9,7 +9,6 @@ export const Container = styled.div`
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	padding: 2em;
 `;
 
 export const CardBox = styled.div<CardBoxT>`

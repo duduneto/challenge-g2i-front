@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Text } from '../../components';
+import { Button, Text } from '../../components';
 import { useContents } from '../../hooks';
 import { useGlobalDispatch } from '../../hooks/useDispatch';
 import { useAppSelector } from '../../hooks/useSelector';
@@ -10,15 +10,18 @@ import {
   GreetingsContainer,
   CTAContainer,
  } from './styles';
+ import { useNavigate } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const contents = useContents();
   const { setState } = useGlobalDispatch();
+  const navigate = useNavigate();
+
   const home = useAppSelector(state => state.global.home);
+
   // const [value, setValue] = React.useState(false);
-  const pressStart = () => {
-    setState({ home: new Date().getTime() })
-    // setValue(state => !state);
+  const pressBegin = () => {
+    navigate("/quiz");
   };
 
   React.useEffect(() => {
@@ -40,7 +43,7 @@ const Home: React.FC = () => {
           </ContentBox>
         </GreetingsContainer>
         <CTAContainer>
-          <Button>BEGIN</Button>
+          <Button onClick={pressBegin} >BEGIN</Button>
         </CTAContainer>
       </ContentContainer>
     </Container>
