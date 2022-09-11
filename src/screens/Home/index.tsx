@@ -2,7 +2,6 @@ import React from 'react';
 import { useContents } from '../../hooks';
 import { useGlobalDispatch } from '../../hooks/useDispatch';
 import { useAppSelector } from '../../hooks/useSelector';
-import ChildComp from './child';
 
 const Home: React.FC = () => {
   const contents = useContents();
@@ -16,8 +15,6 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <h1>Child</h1>
-      <ChildComp />
       <h1>Parent</h1>
       <h2>{home}</h2>
       <h1>{contents.content.welcome}</h1>
