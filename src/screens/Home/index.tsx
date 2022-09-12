@@ -3,14 +3,14 @@ import { Button, Text } from '../../components';
 import { useContents } from '../../hooks';
 import { useGlobalDispatch } from '../../hooks/useDispatch';
 import { useAppSelector } from '../../hooks/useSelector';
-import { 
+import {
   Container,
   ContentBox,
   ContentContainer,
   GreetingsContainer,
   CTAContainer,
- } from './styles';
- import { useNavigate } from 'react-router-dom';
+} from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const contents = useContents();
@@ -25,17 +25,20 @@ const Home: React.FC = () => {
   };
 
   React.useEffect(() => {
-    setState({ navbar: { title: 'Welcome to the Trivia Challenge!' } })
-  }, [])
+    setState({
+      key: 'navbar.title',
+      value: 'Welcome to the Trivia Challenge!'
+    })
+  }, [setState]);
 
   return (
     <Container>
       <ContentContainer>
         <GreetingsContainer>
           <ContentBox>
-            <Text 
-            content='You will be presented with 10 True or False questions.'
-            size='md-lg'
+            <Text
+              content='You will be presented with 10 True or False questions.'
+              size='md-lg'
             />
           </ContentBox>
           <ContentBox>
