@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button, Text } from '../../components';
 import { useContents } from '../../hooks';
-import { useGlobalDispatch } from '../../hooks/useDispatch';
-import { useAppSelector } from '../../hooks/useSelector';
+import { useGlobalDispatch, useAppSelector } from '../../hooks';
 import {
   Container,
   ContentBox,

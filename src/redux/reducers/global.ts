@@ -8,7 +8,11 @@ interface IIndexable {
 
 type IInitialState = IIndexable & {
     home?: any;
+    error?: {
+        message: string;
+    },
     quiz: {
+        loading: boolean,
         step: {
             current: number,
             total: number
@@ -19,7 +23,7 @@ type IInitialState = IIndexable & {
             difficulty: string,
             question: string,
             correct_answer: 'True' | 'False',
-            incorrect_answers: 'True' | 'False'[]
+            incorrect_answers: 'True' | 'False'[],
         }[]
     }
 }
@@ -32,11 +36,12 @@ type PayloadActionT = {
 // Define the initial state using that type
 const initialState: IInitialState = {
     quiz: {
+        loading: false,
         step: {
             current: 1,
-            total: 0
+            total: 0,
         },
-        questions: []
+        questions: [],
     }
 }
 

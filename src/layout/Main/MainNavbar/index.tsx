@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppSelector } from '../../../hooks/useSelector';
+import { useAppSelector } from '../../../hooks';
 import { Navbar } from '../../components';
 
 const MainNavbar: React.FC = () => {
