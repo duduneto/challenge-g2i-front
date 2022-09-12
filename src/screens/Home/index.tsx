@@ -27,7 +27,11 @@ const Home: React.FC = () => {
     setState({
       key: 'navbar.title',
       value: 'Welcome to the Trivia Challenge!'
-    })
+    });
+    setState({
+      key: 'quiz.step.current',
+      value: 0
+    });
   }, [setState]);
 
   return (

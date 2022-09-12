@@ -18,6 +18,19 @@ const Question: React.FC = () => {
     dispatch.setState({ key: 'quiz.step.current', value: step.current + 1 })
   }
 
+  const wrapUpQuiz = () => {
+    dispatch.setState({key: 'quiz.finished', value: true});
+  }
+
+  const answerQuestion = (answer: 'True' | 'False') => {
+    dispatch.setAnswer(answer);
+    if(step.current !== step.total - 1) {
+      nextQuestion();
+    } else {
+      wrapUpQuiz();
+    }
+  }
+
   React.useEffect(() => {
     if (questions?.[step.current]) {
       dispatch.setState({ key: 'navbar.title', value: questions[step.current].category })
@@ -28,12 +41,18 @@ const Question: React.FC = () => {
     <Container>
       <Card>
         <ContentBox>
-          <Text content={unEscape(questions[step.current].question)}></Text>
+          <Text
+            padding='1rem'
+          >
+            {
+              unEscape(questions?.[step.current]?.question)
+            }
+          </Text>
         </ContentBox>
       </Card>
       <ButtonBox>
-        <Button width='48%'>False</Button>
-        <Button width='48%' onClick={nextQuestion}>True</Button>
+        <Button width='48%' onClick={() => answerQuestion('False')}>False</Button>
+        <Button width='48%' onClick={() => answerQuestion('True')}>True</Button>
       </ButtonBox>
     </Container>
   );

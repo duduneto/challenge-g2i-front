@@ -17,14 +17,16 @@ type IInitialState = IIndexable & {
             current: number,
             total: number
         },
+        answers: string[],
         questions: {
             category: string,
             type: boolean,
             difficulty: string,
             question: string,
             correct_answer: 'True' | 'False',
-            incorrect_answers: 'True' | 'False'[],
-        }[]
+            incorrect_answers: string[],
+        }[],
+        finished: boolean,
     }
 }
 
@@ -42,6 +44,8 @@ const initialState: IInitialState = {
             total: 0,
         },
         questions: [],
+        answers: [],
+        finished: false,
     }
 }
 
@@ -53,10 +57,13 @@ export const globalSlice = createSlice({
         setState: (state, action: PayloadAction<PayloadActionT>, keyValue?: string) => {
             _.set(state, action.payload.key, action.payload.value);
         },
+        setAnswer: (state, action: PayloadAction<'True' | 'False'>) => {
+            state.quiz.answers = [...state.quiz.answers, action.payload];
+        }
     },
 })
 
-export const { setState } = globalSlice.actions;
+export const { setState, setAnswer } = globalSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectState = (state: RootState) => state;

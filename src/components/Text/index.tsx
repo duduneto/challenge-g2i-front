@@ -3,19 +3,25 @@ import { TextSizesT } from '../../contents/sizes/text';
 import { Container, TextComp } from './styles';
 
 type Props = {
-    content: string;
+    content?: string;
     size?: keyof TextSizesT;
+    padding?: string;
+    children?: React.ReactNode;
 }
 
 const Text: React.FC<Props> = ({
     content,
     size = 'md',
+    children,
+    padding,
 }) => {
     return (
-        <Container>
+        <Container
+        padding={padding}
+        >
             <TextComp
             size={size}
-            >{content}</TextComp>
+            >{content || children}</TextComp>
         </Container>
     );
 }
