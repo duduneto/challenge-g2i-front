@@ -9,7 +9,7 @@ const QuestionStep: React.FC = () => {
 
   return (
     <Container>
-        <h4>{current} of {total}</h4>
+        <h4>{current + 1} of {total}</h4>
     </Container>
   );
 }

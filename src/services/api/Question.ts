@@ -21,6 +21,10 @@ export class ApiQuestions extends FetchRequest {
             key: 'quiz.questions',
             value: fetchResult.results
          })
+         this.dispatch.setState({
+            key: 'quiz.step.total',
+            value: fetchResult.results.length
+         })
       } catch (error) {
          this.dispatch.setState({
             key: 'error',

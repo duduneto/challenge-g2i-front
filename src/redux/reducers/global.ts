@@ -38,7 +38,7 @@ const initialState: IInitialState = {
     quiz: {
         loading: false,
         step: {
-            current: 1,
+            current: 0,
             total: 0,
         },
         questions: [],

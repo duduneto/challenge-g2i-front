@@ -12,6 +12,7 @@ export const ContentBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 `;
 
 export const ButtonBox = styled.div`
