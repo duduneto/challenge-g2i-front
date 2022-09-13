@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Text } from '../../components';
-import { useContents } from '../../hooks';
-import { useGlobalDispatch, useAppSelector } from '../../hooks';
+import { useGlobalDispatch } from '../../hooks';
 import {
   Container,
   ContentBox,
@@ -12,13 +11,9 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 const Home: React.FC = () => {
-  const contents = useContents();
   const { setState } = useGlobalDispatch();
   const navigate = useNavigate();
 
-  const home = useAppSelector(state => state.global.home);
-
-  // const [value, setValue] = React.useState(false);
   const pressBegin = () => {
     navigate("/quiz");
   };

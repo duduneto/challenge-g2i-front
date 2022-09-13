@@ -20,12 +20,14 @@ const Quiz: React.FC = () => {
 
   React.useEffect(() => {
     questionApi.list();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
     if (finished) {
       navigate('/results');
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished]);
 
   return (

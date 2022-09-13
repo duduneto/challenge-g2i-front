@@ -35,6 +35,7 @@ const Question: React.FC = () => {
     if (questions?.[step.current]) {
       dispatch.setState({ key: 'navbar.title', value: questions[step.current].category })
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step, questions])
 
   return (

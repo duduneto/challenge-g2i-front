@@ -43,6 +43,7 @@ const Results: React.FC = () => {
 
     React.useEffect(() => {
         dispatch.setState({ key: 'navbar.title', value: 'Quiz Results' })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
