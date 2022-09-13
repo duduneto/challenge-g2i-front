@@ -72,7 +72,7 @@ const Results: React.FC = () => {
                 </AnswersContainer>
             </Container>
             <ButtonContainer>
-                <Button onClick={tryAgaing}>Try Again</Button>
+                <Button onClick={tryAgaing}>Play Again</Button>
             </ButtonContainer>
         </>
     );
