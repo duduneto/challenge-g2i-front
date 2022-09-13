@@ -8,10 +8,12 @@ export enum Language_Enum {
 export const textContents = {
     "HOME": {
         "en": {
-            "welcome": "Welcome to the Trivia Challenge"
+            "welcome": "Welcome to the Trivia Challenge",
+            "beginButton": "Begin",
         },
         "pt": {
-            "welcome": "Bem vindo ao desafio de Trivia"
+            "welcome": "Bem vindo ao desafio de Trivia",
+            "beginButton": "Começar",
         }
     }
 };
