@@ -54,10 +54,10 @@ export const globalSlice = createSlice({
     // `createSlice` will infer the state type from the `initialState` argument
     initialState,
     reducers: {
-        initState: (state) => {
+        clearState: (state) => {
             state = initialState
         },
-        setState: (state, action: PayloadAction<PayloadActionT>, keyValue?: string) => {
+        setState: (state, action: PayloadAction<PayloadActionT>) => {
             _.set(state, action.payload.key, action.payload.value);
         },
         setAnswer: (state, action: PayloadAction<'True' | 'False'>) => {
@@ -66,7 +66,7 @@ export const globalSlice = createSlice({
     },
 })
 
-export const { setState, setAnswer, initState } = globalSlice.actions;
+export const { setState, setAnswer, clearState } = globalSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectState = (state: RootState) => state;

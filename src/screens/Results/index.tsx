@@ -37,7 +37,7 @@ const Results: React.FC = () => {
     }));
 
     const tryAgaing = () => {
-        dispatch.initState();
+        dispatch.clearState();
         navigate('/');
     }
 
