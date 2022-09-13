@@ -52,8 +52,8 @@ const Question: React.FC = () => {
         </ContentBox>
       </Card>
       <ButtonBox>
-        <Button width='48%' onClick={() => answerQuestion('False')}>False</Button>
-        <Button width='48%' onClick={() => answerQuestion('True')}>True</Button>
+        <Button btnStyle='danger' width='48%' onClick={() => answerQuestion('False')}>False</Button>
+        <Button btnStyle='success' width='48%' onClick={() => answerQuestion('True')}>True</Button>
       </ButtonBox>
     </Container>
   );
